@@ -1,6 +1,13 @@
 <div class="container-fluid">
-
-  <app-zipcode-entry> </app-zipcode-entry>
-  <app-current-conditions></app-current-conditions>
-
+  <div class="form-group">
+    <label>Caching duration (in milliseconds)</label>
+    <div>
+    <input [formControl]="cacheDuration" type="number" class="form-control" placeholder="Enter the number of milliseconds that data should be cached for">
+    <button (click)="updateCacheDuration()" class="btn">Update cache duration</button>
+    </div>
+    <small id="emailHelp" class="form-text text-muted">Default value is 7,200,000 milliseconds (or 2 hours) </small>
+  </div>
+  <app-zipcode-entry /> 
+  <app-current-conditions />
 </div>
+
